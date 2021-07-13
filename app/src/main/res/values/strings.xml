@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Messenger</string>
+
+    <!-- activity_login -->
+    <string name="login_input_layout_hint">login</string>
+    <string name="password_input_layout_hint">password</string>
+    <string name="login_button">login</string>
+    <string name="create_account_button">create new account</string>
+
 </resources>
