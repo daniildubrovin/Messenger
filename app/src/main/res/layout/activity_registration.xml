@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegistrationActivity">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -16,18 +16,30 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
-            android:id="@+id/loginLinearLayout"
+            android:id="@+id/registrationLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/registrationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registration_text_view"
+                android:textColor="@color/black"
+                android:textSize="16pt"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="32dp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:id="@+id/loginTextInputLayout"
+                android:id="@+id/loginRegistrationTextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:hint="@string/login_input_layout_hint"
+                app:helperTextEnabled="true"
+                app:helperText="@string/registration_login_helper_text"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -38,13 +50,38 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:id="@+id/passwordTextInputLayout"
+                android:id="@+id/passwordRegistrationTextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:hint="@string/password_input_layout_hint"
                 app:endIconMode="password_toggle"
-                app:errorEnabled="true">
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
+                app:helperTextEnabled="true"
+                app:helperText="@string/registration_password_helper_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/repeatPasswordRegistrationTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="@string/registration_repeat_password_helper_text"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
+                app:helperTextEnabled="true"
+                app:helperText="@string/registration_repeat_password_helper_text">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -54,24 +91,20 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/loginButton"
+                android:id="@+id/registrationButton"
                 style="?attr/materialButtonOutlinedStyle"
+                android:layout_margin="16dp"
                 android:layout_width="256dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/login_button" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/createAccountButton"
-                style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="256dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="16dp"
-                android:text="@string/create_account_button" />
-
         </LinearLayout>
 
+
     </com.google.android.material.card.MaterialCardView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

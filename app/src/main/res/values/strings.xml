@@ -7,4 +7,11 @@
     <string name="login_button">login</string>
     <string name="create_account_button">create new account</string>
 
+    <!-- activity_registration -->
+    <string name="registration_button">create new account</string>
+    <string name="registration_text_view">creating a new user</string>
+    <string name="registration_password_helper_text">the password must contain at least 8 characters</string>
+    <string name="registration_repeat_password_helper_text">repeat the password</string>
+    <string name="registration_login_helper_text">the login must contain both numbers and symbols</string>
+
 </resources>
